@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sherzod Risqulov | Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;500;700&display=swap');
+        body { font-family: 'Space+Grotesk', sans-serif; scroll-behavior: smooth; }
+        .bg-dark-blue { background-color: #0f172a; }
+        .text-accent { color: #fbbf24; }
+        .lang-btn.active { background-color: #fbbf24; color: #0f172a; }
+        
+        /* 2508x1672 o'lchamli rasm konteyneri uchun maxsus nisbat (Aspect Ratio 3:2) */
+        .img-container {
+            position: relative;
+            width: 100%;
+            padding-top: 66.66%; /* (1672 / 2508) * 100 = 66.66% */
+            overflow: hidden;
+        }
+        .img-container img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* Rasmni konteynerga moslab kesadi */
+            transition: transform 0.5s ease;
+        }
+        .card-zoom:hover img { transform: scale(1.05); }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-900">
+
+    <div class="fixed top-6 right-6 z-50 flex gap-2 bg-dark-blue p-1.5 rounded-full shadow-2xl border border-white/10">
+        <button onclick="changeLang('uz')" id="btn-uz" class="lang-btn active px-5 py-1.5 rounded-full text-xs font-bold transition">UZB</button>
+        <button onclick="changeLang('en')" id="btn-en" class="lang-btn px-5 py-1.5 rounded-full text-xs font-bold transition text-white">ENG</button>
+        <button onclick="changeLang('ru')" id="btn-ru" class="lang-btn px-5 py-1.5 rounded-full text-xs font-bold transition text-white">RUS</button>
+    </div>
+
+    <section class="min-h-screen flex items-center justify-center bg-dark-blue text-white px-6 text-center">
+        <div class="max-w-4xl">
+            <h1 class="text-3xl md:text-5xl font-bold mb-4 tracking-tight" id="t-name">
+                Risqulov Sherzod Adxam o'g'li
+            </h1>
+            <div class="h-1 w-24 bg-accent mx-auto mb-6"></div>
+            <p class="text-xl md:text-2xl text-slate-300 mb-2" id="t-birth">2005.06.29</p>
+            <p class="text-lg text-accent font-medium mb-8" id="t-edu">FDTU 5/4</p>
+            <p class="text-slate-400 text-sm italic" id="t-loc">O'zbekiston Respublikasi, Toshkent viloyati, Bekobod shahri</p>
+        </div>
+    </section>
+
+    <section class="py-20 px-6 max-w-7xl mx-auto">
+        <div class="grid md:grid-cols-2 gap-12">
+            
+            <div class="bg-white rounded-xl overflow-hidden shadow-lg border card-zoom">
+                <div class="img-container">
+                    <img src="<a href="https://ibb.co/7JV9d9CT"><img src="https://i.ibb.co/Z6KZpZXw/photo-2026-04-06-23-49-02.jpg" alt="photo-2026-04-06-23-49-02" border="0"></a>">
+                </div>
+                <div class="p-8">
+                    <h3 class="text-2xl font-bold mb-3" id="t-j1-title">Informatika O'qituvchisi</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed" id="t-j1-desc">
+                        2025-yildan beri Bekobod shahar 1-son texnikumda Informatika fanidan va Axborot xavfsizligi fanidan dars beraman.
+                    </p>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-xl overflow-hidden shadow-lg border card-zoom">
+                <div class="img-container">
+                    <img src="<a href="https://ibb.co/TB2b9Krv"><img src="https://i.ibb.co/XZL3cyV2/photo-2026-04-06-23-49-02-2.jpg" alt="photo-2026-04-06-23-49-02-2" border="0"></a>">
+                </div>
+                <div class="p-8">
+                    <h3 class="text-2xl font-bold mb-3" id="t-j2-title">Mobil videograf, Fotograf</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed" id="t-j2-desc">
+                        2020-yildan hozirgacha ba'zi do'kon kafelar bilan ishlaganman va Merry Me, tug'ulgan kunlar uchun alohida esda qolarli xotirilar ulashganman.
+                    </p>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-xl overflow-hidden shadow-lg border card-zoom">
+                <div class="img-container">
+                    <img src="<a href="https://ibb.co/1YVVwkcV"><img src="https://i.ibb.co/kVnnWtZn/photo-2026-04-06-23-48-59.jpg" alt="photo-2026-04-06-23-48-59" border="0"></a>">
+                </div>
+                <div class="p-8">
+                    <h3 class="text-2xl font-bold mb-3" id="t-j3-title">Sushi va Fast food bo'yicha povar</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed" id="t-j3-desc">
+                        2019-2023 yillarda Sushi Yummy, Dolce Janon kabi kafelarda sushi bosh povar bo'lib ishlaganman. Max Wayning bir nechta filialarida universal povr darajasida ishlab kelganman.
+                    </p>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-xl overflow-hidden shadow-lg border card-zoom">
+                <div class="img-container">
+                    <img src="<a href="https://ibb.co/NnYSd82s"><img src="https://i.ibb.co/yBsScwFX/photo-2026-04-06-23-48-58.jpg" alt="photo-2026-04-06-23-48-58" border="0"></a>">
+                </div>
+                <div class="p-8">
+                    <h3 class="text-2xl font-bold mb-3" id="t-j4-title">NEEPU Sertifikati (Xitoy)</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed" id="t-j4-desc">
+                        2026-yilda Xitoy Xalq Respublikasining NEEPU universitetida Sun'iy intellekt va Elektor energiya bo'yicha malaka oshirib "Xalqaro sertifikat" olib qaytganman.
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <footer class="bg-dark-blue py-10 text-center text-white/40 text-xs">
+        <p>© 2026 Risqulov Sherzod. Bekobod.</p>
+    </footer>
+
+    <script>
+        const translations = {
+            uz: {
+                name: "Risqulov Sherzod Adxam o'g'li",
+                birth: "2005.06.29",
+                edu: "FDTU 5/4",
+                loc: "O'zbekiston Respublikasi, Toshkent viloyati, Bekobod shahri",
+                j1Title: "Informatika O'qituvchisi",
+                j1Desc: "2025-yildan beri Bekobod shahar 1-son texnikumda Informatika fanidan va Axborot xavfsizligi fanidan dars beraman.",
+                j2Title: "Mobil videograf, Fotograf",
+                j2Desc: "2020-yildan hozirgacha ba'zi do'kon kafelar bilan ishlaganman va Merry Me, tug'ulgan kunlar uchun alohida esda qolarli xotirilar ulashganman.",
+                j3Title: "Sushi va Fast food bo'yicha povar",
+                j3Desc: "2019-2023 yillarda Sushi Yummy, Dolce Janon kabi kafelarda sushi bosh povar bo'lib ishlaganman. Max Wayning bir nechta filialarida unversal povr darachasida ishlab kelganman.",
+                j4Title: "NEEPU Sertifikati (Xitoy)",
+                j4Desc: "2026-yilda Xitoy Xalq Respublikasining NEEPU universitetida Sun'iy intellekt va Elektor energiya bo'yicha malaka oshirib 'Xalqaro sertifikat' olib qaytganman."
+            },
+            en: {
+                name: "Sherzod A. Riskulov",
+                birth: "June 29, 2005",
+                edu: "FDTU 5/4",
+                loc: "Bekabad, Tashkent Region, Uzbekistan",
+                j1Title: "Informatics Instructor",
+                j1Desc: "Teaching Computer Science and Information Security at Bekabad Technical College No. 1 since 2025.",
+                j2Title: "Mobile Videographer & Photographer",
+                j2Desc: "Worked with various shops and cafes since 2020, creating memories for Merry Me and birthdays.",
+                j3Title: "Sushi & Fast Food Chef",
+                j3Desc: "Working as Head Sushi Chef at Sushi Yummy and Dolce Janon (2019-2023). Also served as Universal Chef at Max Way branches.",
+                j4Title: "NEEPU Certificate (China)",
+                j4Desc: "In 2026, completed professional development in AI and Electric Power at NEEPU University, China, receiving an International Certificate."
+            },
+            ru: {
+                name: "Рискулов Шерзод Адхам угли",
+                birth: "29.06.2005",
+                edu: "ФДТУ 5/4",
+                loc: "Узбекистан, Ташкентская обл., г. Бекабад",
+                j1Title: "Учитель Информатики",
+                j1Desc: "С 2025 года преподаю Информатику и Информационную безопасность в Бекабадском техникуме №1.",
+                j2Title: "Мобильный Видеограф, Фотограф",
+                j2Desc: "С 2020 года работаю с магазинами и кафе, создавая воспоминания для мероприятий Merry Me и дней рождения.",
+                j3Title: "Повар по Суши и Фастфуду",
+                j3Desc: "В 2019-2023 годах работал шеф-поваром по суши в Sushi Yummy и Dolce Janon. Также работал универсальным поваром в филиалах Max Way.",
+                j4Title: "Сертификат NEEPU (Китай)",
+                j4Desc: "В 2026 году прошел повышение квалификации по ИИ и электроэнергии в университете NEEPU, Китай, получив международный сертификат."
+            }
+        };
+
+        function changeLang(lang) {
+            const t = translations[lang];
+            document.getElementById('t-name').innerText = t.name;
+            document.getElementById('t-birth').innerText = t.birth;
+            document.getElementById('t-edu').innerText = t.edu;
+            document.getElementById('t-loc').innerText = t.loc;
+            document.getElementById('t-j1-title').innerText = t.j1Title;
+            document.getElementById('t-j1-desc').innerText = t.j1Desc;
+            document.getElementById('t-j2-title').innerText = t.j2Title;
+            document.getElementById('t-j2-desc').innerText = t.j2Desc;
+            document.getElementById('t-j3-title').innerText = t.j3Title;
+            document.getElementById('t-j3-desc').innerText = t.j3Desc;
+            document.getElementById('t-j4-title').innerText = t.j4Title;
+            document.getElementById('t-j4-desc').innerText = t.j4Desc;
+
+            document.querySelectorAll('.lang-btn').forEach(btn => {
+                btn.classList.remove('active', 'text-white');
+                if(btn.id !== 'btn-' + lang) btn.classList.add('text-white');
+            });
+            document.getElementById('btn-' + lang).classList.add('active');
+        }
+    </script>
+</body>
+</html>
